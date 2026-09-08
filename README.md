@@ -51,11 +51,11 @@ make sim        # desktop simulator, no board needed
   </picture>
 </p>
 
-M5Stack StickC Plus, StickC Plus SE, and StickS3. Flash from the browser via the [docs](https://gooshi.me/#build), or locally:
+M5Stack StickC, StickC Plus, StickC Plus SE, and StickS3. Flash from the browser via the [docs](https://gooshi.me/#build), or locally:
 
 ```bash
 cd firmware
-TAMA_BRAND=<id> pio run -e m5sticks3 -t upload   # or m5stickc-plus, m5stickc-plus-se
+TAMA_BRAND=<id> pio run -e m5sticks3 -t upload   # or m5stickc, m5stickc-plus, m5stickc-plus-se
 ```
 
 `<id>` is a folder under `brands/`, its `config.yaml` defines what the build includes.

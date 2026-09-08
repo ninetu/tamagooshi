@@ -5,7 +5,7 @@ from gen.emit.sprites import sprite_header
 from gen.features.mascots import MASCOTS
 from gen.images import logo_mask
 from gen.manifest import hostname
-from gen.platform.boards import BOARDS, SCREEN_H, SCREEN_W, has_ir
+from gen.platform.boards import BOARDS, has_ir
 from gen.platform.boards import macro as board_macro
 from gen.ui.themes import ROLES as THEME_ROLES
 from gen.ui.typefaces import ROLES as TYPEFACE_ROLES
@@ -213,8 +213,8 @@ def emit_boards(out_dir):
             'inline DeviceCapabilities capabilities() {',
             '  DeviceCapabilities caps;',
             f'  caps.model = {cstr(bid)};',
-            f'  caps.screenW = {SCREEN_W};',
-            f'  caps.screenH = {SCREEN_H};',
+            f'  caps.screenW = {b["screen_w"]};',
+            f'  caps.screenH = {b["screen_h"]};',
             f'  caps.buttons = {c["buttons"]};',
             f'  caps.led = {cstr(c["led"])};',
             f'  caps.ir = {"true" if has_ir(b) else "false"};',

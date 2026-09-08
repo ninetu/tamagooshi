@@ -1,9 +1,23 @@
-SCREEN_W = 135
-SCREEN_H = 240
-
 RELEASE_BASE = "https://gooshi.me/firmware/"
 
 BOARDS = {
+    "m5stickc": {
+        "name": "M5StickC",
+        "m5_board": "board_M5StickC",
+        "led_pin": 10,
+        "ir_tx_pin": 9,
+        "ir_rx_pin": -1,
+        "chip_family": "ESP32",
+        "chip": "esp32",
+        "flash_size": "4MB",
+        "boot_offset": "0x1000",
+        "config_offset": 0x310000,
+        "screen_w": 80,
+        "screen_h": 160,
+        "caps": {"buttons": 2, "led": "single", "buzzer": True, "speaker": False,
+                 "mic": True, "imu": True, "joystick": False, "haptics": False,
+                 "wearable": True, "psram": False},
+    },
     "m5stickc-plus": {
         "name": "M5StickC Plus",
         "m5_board": "board_M5StickCPlus",
@@ -15,6 +29,8 @@ BOARDS = {
         "flash_size": "4MB",
         "boot_offset": "0x1000",
         "config_offset": 0x310000,
+        "screen_w": 135,
+        "screen_h": 240,
         "caps": {"buttons": 2, "led": "single", "buzzer": True, "speaker": False,
                  "mic": True, "imu": True, "joystick": False, "haptics": False,
                  "wearable": True, "psram": False},
@@ -30,6 +46,8 @@ BOARDS = {
         "flash_size": "4MB",
         "boot_offset": "0x1000",
         "config_offset": 0x310000,
+        "screen_w": 135,
+        "screen_h": 240,
         "caps": {"buttons": 2, "led": "single", "buzzer": True, "speaker": False,
                  "mic": True, "imu": False, "joystick": False, "haptics": False,
                  "wearable": True, "psram": False},
@@ -45,6 +63,8 @@ BOARDS = {
         "flash_size": "8MB",
         "boot_offset": "0x0",
         "config_offset": 0x650000,
+        "screen_w": 135,
+        "screen_h": 240,
         "caps": {"buttons": 2, "led": "single", "buzzer": False, "speaker": True,
                  "mic": True, "imu": True, "joystick": False, "haptics": False,
                  "wearable": True, "psram": True},
